@@ -1,0 +1,104 @@
+[role="main"]
+{
+   padding-top: 15px;
+}
+.tabla-no-borde
+{
+   border: 0px;
+   padding: 1px;
+   margin: 0px;
+   background-color: white;
+   border-color:white;
+   float: center;
+}
+.tabla-no-borde table,
+.tabla-no-borde thead,
+.tabla-no-borde th,
+.tabla-no-borde tbody,
+.tabla-no-borde tr,
+.tabla-no-borde td 
+{
+   border: 0px;
+   padding: 1px;
+   margin: 0px;
+   background-color: white;
+   border-color:white;
+   float: center;
+}
+.h-no-estyle h1,
+.h-no-estyle h2,
+.h-no-estyle h3,
+.h-no-estyle h4{
+   font-weight: normal;  
+   padding: 1px;
+   margin: 0px;
+   background-color: white;
+}
+.fila-no-estilo{
+   background-color: white;
+   padding: 3px;
+   margin: 0px;
+   background-color: white;
+}
+.dataTables_filter 
+{ 
+   float: right; 
+   text-align: right; 
+   visibility: hidden; 
+   display:none;
+}
+.dataTables_wrapper table thead{
+    display:none;
+}
+.dataTables_wrapper .row{
+    height: 0%;
+}
+.bb {
+   border-bottom: 10px solid black;
+}
+
+.search {
+background: transparent 0 0 no-repeat;
+margin-top:10px;
+position:relative; /* This is necessary to absolutely position your search button image later */
+}
+
+.search input {border:none;} /* Prevents form input elements from having the default border placed around the element */
+
+.search input.box {
+background-color:#ddd;
+position:absolute; /* important */
+bottom:0;
+left:5px;
+}
+
+.select-wrapper select{
+margin: 0;
+position: absolute;
+z-index: 2;            
+cursor: pointer;
+
+/* CSS hacks for older browsers */
+_noFocusLine: expression(this.hideFocus=true); 
+-webkit-appearance: none;
+-moz-appearance: none;
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+-khtml-opacity: 0;
+-moz-opacity: 0;
+}
+
+#map-event-canvas
+{
+   padding-top: 5%;
+   width: 100%;
+   height: 300px;
+   max-height: 400px;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 2;
+    color: #FFF;
+    cursor: default;
+    background-color: #428BCA;
+    border-color: #428BCA;
+}

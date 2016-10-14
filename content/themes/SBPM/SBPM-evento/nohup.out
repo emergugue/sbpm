@@ -1,0 +1,4 @@
+"sni-qt/5673" WARN  16:02:49.513 void StatusNotifierItemFactory::connectToSnw() Invalid interface to SNW_SERVICE 
+Client name = cadence-aloop-daemon conflits with another running client
+Cannot connect to the server
+cadence-aloop-daemon is already running, delete "/tmp/.cadence-aloop-daemon.x" to close it

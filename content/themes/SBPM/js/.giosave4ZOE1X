@@ -1,0 +1,618 @@
+function vista_anual(ano)
+{
+      var rano = ano;
+      jQuery(".calendar-months").html('');
+      var meses = new Array ("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+      var dias = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+      var anio = data[ano];
+      if(anio)
+      {
+        var html = ""; 
+        html += '<table id="evento-calendario" class="tabla-no-borde" border="0" cellspacing="0" width="100%">';
+        html += '     <thead>';
+        html += '        <tr style="background-color: white;">';
+        html += '          <th>Biblioteca</th>';
+        html += '          <th>Publico</th>';
+        html += '          <th>Evento</th>';
+        html += '          <th>Fecha</th>';
+        html += '          <th>MesAnio</th>'
+        html += '          <th><h2 style="font-family: Roboto; font-weight:300; color: #8b9094">Todas las bibliotecas</h2></th>';
+        html += '        </tr>';
+        html += '      </thead>';
+        html += '      <tbody>';
+
+        for(h in anio)
+        {
+          var aniomes = h;
+          if(aniomes)
+          {
+            for(i in anio[aniomes])
+            {
+              var aniomesdia = i;
+              if(aniomesdia)
+              {
+                var d = new Date(parseInt(ano),parseInt(aniomes)-1, parseInt(aniomesdia));
+                var diaoficial = dias[d.getDay()];
+
+                for( j in anio[aniomes][aniomesdia] )
+                {
+                  var html2 = '';
+                  var campo = false;
+                  var campos = [];
+                  titulo = "";
+                  descripcion = "";
+                  biblioteca = "";
+                  tipo = "";
+                  publico = "";
+                  fecha = "";
+                  hora = "";
+                  dia = "";
+                  mes = "";
+                  espacio = "";
+                  categoria = "";
+                  for ( k in anio[aniomes][aniomesdia][j] ) 
+                  {
+                    if( anio[aniomes][i][j][k]['id_campo'] == 8 && !campo)
+                    {
+                      titulo = anio[aniomes][aniomesdia][j][k]['contenido'];
+                      campo = true;
+                    }
+                    else
+                    {
+                      if(campos.indexOf(anio[aniomes][aniomesdia][j][k]['campo_nombre']) == -1)
+                      {
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Descripción breve")
+                        {
+                          descripcion = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Biblioteca")
+                        {
+                          biblioteca = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Tipo de programación")
+                        {
+                          tipo = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Públicos")
+                        {
+                          publico = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Fecha")
+                        {
+                          fecha = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Horario")
+                        {
+                          hora = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Día")
+                        {
+                          dia = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Mes")
+                        {
+                          mes = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Espacios de la biblioteca")
+                        {
+                          espacio = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        if(anio[aniomes][aniomesdia][j][k]['campo_nombre'] == "Categoría en la agenda")
+                        {
+                          categoria = anio[aniomes][aniomesdia][j][k]['contenido'];
+                        }
+                        campos.push(anio[aniomes][i][j][k]['campo_nombre']);
+                      }
+                    }
+                  }
+/* */
+                  var TodayDate = new Date();
+                  var diahoy = TodayDate.getDay();
+                  var meshoy = TodayDate.getMonth()+1;
+
+                  if (fecha != "")
+                  {
+                    var diames = fecha.slice(-2) + "/" + diaoficial;
+                    mes = parseInt(fecha.slice(-5).substring(0,2));
+                    anooficial = parseInt(fecha.substring(0,4));
+                    mesoficial = mes;
+                    mes = meses[mes];
+                    diaevento = parseInt(fecha.slice(-2));
+                    mesanio = mes + "/" + fecha.substring(0,4);
+                    mesanio = mesanio.toUpperCase();
+                    auxanio = fecha.substring(0,4);
+                    auxmes  = fecha.substring(5,7);
+                    auxdia  = fecha.substring(8,10);
+                    fecha2  = auxanio + auxmes + auxdia;
+                    fecha = fecha2;
+                    hora2   = hora.substring(0,2);
+                    minutos = hora.slice(-2);
+
+                    var fechainicial = new Date(parseInt(fecha.substring(0,4)), mesoficial, diaevento, hora2, minutos, 0);
+                    fechainicial = fechainicial.getUTCFullYear() + "" + fechainicial.getUTCMonth() + "" + fechainicial.getUTCDate() + "T" + fechainicial.getUTCHours() + "" + fechainicial.getUTCMinutes() + "00Z";
+
+
+                    //alert(fecha + " " + mes);
+                  }
+                  else
+                  {
+                    var diames = "";
+                    anooficial = ano;
+                    mesoficial = meshoy;
+                    diaevento  = diahoy;
+                  }
+
+                  if ( anooficial >= parseInt(ano))
+                  {
+//                    if (mesoficial >= parseInt(meshoy))
+//                    {
+                        icono_categoria = "";
+                        categoria = categoria.toLowerCase();
+                        if (categoria == "audiovisual")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_audiovisual.png";
+                        }
+                        else if (categoria == "agenda cultural" || categoria == "programación cultural")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_cultural.png";  
+                          categoria = "cultural";
+                        }
+                        else if (categoria == "deporte y recreación")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_deportes.png";  
+                          categoria = "deporte y recreacion";
+                        }
+                        else if (categoria == "cultura digital" || categoria == "tecnología")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_digital.png";  
+                          categoria = "digital";
+                        }
+                        else if (categoria == "formación ciudadana" || categoria == "formación de usuarios")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_formacion.png";  
+                          categoria = "formacion";
+                        }
+                        else if (categoria == "lectura y escritura")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_lectura.png";
+                        }
+                        else if (categoria == "memoria local")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_memoria.png";
+                          categoria = "memoria";
+                        }
+                        else if (categoria == "taller creativo")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_taller.png";
+                        }
+                        else if (categoria == "vacaciones creativas")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_vacaciones.png";
+                        }
+                        else if (categoria == "académico")
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_academico.png";
+                          categoria = "academico";
+                        }
+                        else
+                        {
+                          icono_categoria = "/content/themes/SBPM/images/iconos_nuevos/icons/i_academico.png";    
+                          categoria = "academico";
+                        }
+
+
+
+
+
+                        icono_publico = "";
+                        publico = publico.toLowerCase();
+                        if (publico == "niños(as)" || publico == "público infantil")
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_infantil.png";
+                          publico = "infantil";
+                        }
+                        else if (publico == "jóvenes" || publico == "público joven")
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_jovenes.png";
+                          publico = "jovenes";
+                        }
+                        else if (publico == "adultos" || publico == "público adulto")
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_adulto.png";  
+                          publico = "adulto";
+                        }
+                        else if (publico == "adultos mayores" || publico=="público adulto mayor")
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_amayor.png";  
+                          publico = "adulto mayor";
+                        }
+                        else if (publico == "público familiar")
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_familia.png";  
+                          publico = "familiar";
+                        }
+                        else if (publico == "comunidad en general" || publico == "todos" || publico =="público general")
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_general.png";
+                          publico = "general";
+                        }
+                        else if (publico == "público femenino" || publico == "femenino")
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_femenino.png";
+                          publico = "femenino";
+                        }
+                        else if (publico == "público con discapacidad")
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_handicap.png";  
+                          publico = "discapacidad";
+                        }
+                        else
+                        {
+                          icono_publico = "/content/themes/SBPM/images/iconos_nuevos/icons/i_general.png";    
+                          publico = "general";
+                        }
+
+
+                        html2 += '        <tr class="'+fecha+'" style="background-color: white;">';
+                        html2 += '          <td>'+ biblioteca +'</td>';
+                        html2 += '          <td>'+ publico +'</td>';
+                        html2 += '          <td>'+ categoria +'</td>';
+                        html2 += '          <td>'+ fecha +'</td>';
+                        html2 += '          <td>'+ mesanio +'</td>';
+                        html2 += '          <td>';
+                        html2 += '            <table class="tabla-no-borde" cellspacing="0" width="100%">';
+                        html2 += '              <tr style="background-color: white;" width="100%">';
+                        html2 += '                <td  width="3%" style="background-color:#5268c2;"></td>';
+                        html2 += '                <td width="35%">';
+                        html2 += '                  <table class="tabla-no-borde" cellspacing="0" width="100%">';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><h2 class="h-no-estyle" style="color:#636567;padding: 0px;margin: 0px;padding-left:10px; font-family: roboto; font-weight: bold; font-size:30px;">' + diames.toUpperCase() +'</h2></td>';
+                        html2 += '                    </tr>';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><h3 style="color:#8b9094;padding: 0px;margin: 0px;padding-left:10px; font-family: roboto; font-size:20px;">'+ hora +'</h3></td>';
+                        html2 += '                    </tr>';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><div><h3 style="color:#5268c2;padding: 0px;margin: 0px;font-weight:bold;padding-left:10px; font-family: roboto; font-weight: bold; font-size:20px;">'+ mes.toUpperCase() +'</h3></div></td>';
+                        html2 += '                    </tr>';
+                        html2 += '                  </table>';
+                        html2 += '                </td>';
+                        html2 += '                <td width="62%">';
+                        html2 += '                  <table class="tabla-no-borde" cellspacing="0" width="100%">';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><h3 style="color:#8b9094;padding: 0px;margin: 0px;font-weight:bold;padding-left:10px; font-family: roboto; font-weight: bold; font-size:30px;">'+ titulo +'</h3></td>';
+                        html2 += '                    </tr>';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><h4 class="h-no-estyle" style="color:#626567;padding: 0px;margin: 0px;padding-left:10px; font-family: roboto; font-size:17px;font-weight: italic;">'+ descripcion +'</h4></td>';
+                        html2 += '                    </tr>';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><h4 class="h-no-estyle" style="color:#626567;padding: 0px;margin: 0px;padding-left:10px; font-family: roboto; font-size:17px;">'+ espacio +'</h4></td>';
+                        html2 += '                    </tr>';
+                        html2 += '                  </table>';
+                        html2 += '                </td>';
+                        html2 += '              </tr>';
+                        html2 += '              <tr style="background-color: white;" width="100%">';
+                        html2 += '                <td width="3%"></td>';
+                        html2 += '                <td width="35%">';
+                        html2 += '                  <table class="tabla-no-borde" cellspacing="0" width="55%">';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td colspan="2"><a id="calendario" href="http://www.google.com/calendar/event?action=TEMPLATE&text='+ titulo +'&dates='+fechainicial + '/'+fechainicial+'&details='+descripcion+'&location='+biblioteca+'&trp=false&sprop=&sprop=name:" target="_blank" rel="nofollow"><img src="/content/themes/SBPM/images/iconos_nuevos/icons/i_calendar.png"></a> </td>';
+
+
+                        html2 += '                    </tr>';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><a target="_blank" href="https://twitter.com/intent/tweet?text=Disfruta del evento acerca de bla bla;via=bibliolabs;hashtag=bibliolabs;url=http://bibliolabs.cc"><img src="/content/themes/SBPM/images/iconos_nuevos/icons/i_twitter.png"></a></td>';
+                        html2 += '                      <td>';
+                        html2 += '                        <a onclick="window.open(' + "'http://www.facebook.com/sharer.php?s=100&amp;p[title]=Compartir Evento&amp;p[summary]=Evento de lo que sea&amp;p[url]=http://bibliolabs.cc&amp;&p[images][0]=http://www.bibliolabs.cc/sbpm.png', 'sharer', 'toolbar=0,status=0,width=620,height=280'" + ');" href="javascript: void(0)"><img src="/content/themes/SBPM/images/iconos_nuevos/icons/i_facebook.png"></a>';
+                        html2 += '                      </td>';
+                        html2 += '                    </tr>';
+                        html2 += '                  </table>';
+                        html2 += '                </td>';
+                        html2 += '                <td width="62%">';
+                        html2 += '                  <table class="tabla-no-borde" cellspacing="0" width="100%">';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><h4 class="h-no-estyle" style="color:#8b9094;padding: 0px;margin: 0px;padding-left:10px; font-family: roboto; font-size:15px;">CATEGORÍAS</h4></td>';
+                        html2 += '                    </tr>';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td><h4 class="h-no-estyle" style="color:#5069b0;padding: 0px;margin: 0px;padding-left:10px; font-family: roboto; font-size:14px;">'+ biblioteca +'</h4></td>';
+                        html2 += '                    </tr>';
+                        html2 += '                    <tr style="background-color: white;">';
+                        html2 += '                      <td>';
+                        html2 += '                        <table class="tabla-no-borde" cellspacing="0" width="40%">';
+                        html2 += '                          <tr>';
+                        html2 += '                            <!-- PUBLICO --> <td><a><img src="'+icono_publico+'"></a></td>';
+                        html2 += '                            <!-- EVENTO  --> <td><a><img src="'+icono_categoria+'"></a></td>';
+                        html2 += '                          </tr>';
+                        html2 += '                        </table>';
+                        html2 += '                      </td>';
+                        html2 += '                    </tr>';
+                        html2 += '                  </table>';
+                        html2 += '                </td>';
+                        html2 += '              </tr>';
+                        html2 += '            </table>';
+                        html2 += '          </td>';
+                        html2 += '        </tr>';
+                        html += html2;
+//                    }
+                  }
+/* */
+                }
+              }
+            }
+          }
+/*          if(aniomes){var aniomesdia = aniomes[i];}
+          if(aniomesdia){
+            var html = ""; 
+            contEventos = 0;
+            html += '<div class="calendar_content_title">';
+            var d = new Date(parseInt(ano),parseInt(h)-1, parseInt(i));
+            var dia = dias[d.getDay()];
+            html += '<h3>'+dia+' '+i+' de '+meses[parseInt(h)]+' del '+ano+' </h3>';
+            html += '</div>';
+            for( j in aniomes[i] ){
+              html += '<div class="calendar_items calendar_items-days">';
+              html += '<div class="medium-text-left">';
+              var html2 = '';
+              var campo = false;
+              var campos = [];
+              for ( k in aniomes[i][j] ) {
+                if( aniomes[i][j][k]['id_campo'] == 8 && !campo){
+                  html += '<big>'+ aniomes[i][j][k]['contenido']+'</big>';
+                  campo = true;
+                }else{
+                  if(campos.indexOf(aniomes[i][j][k]['campo_nombre']) == -1){
+                    html2 += '<li>';
+                    html2 += '<span><strong>'+ aniomes[i][j][k]['campo_nombre']+':</strong> '+aniomes[i][j][k]['contenido']+'</span>';
+                    html2 += '</li>';
+                    campos.push(aniomes[i][j][k]['campo_nombre']);
+                  }
+                }
+              }*/
+//              html += '<ul class="no-bullet">';
+//              html += '<li><p></p></li>';
+//              html += html2;
+//              html += '</ul></div></div>'; 
+        }
+        html += '      </tbody>';
+        html += '    </table>';
+        jQuery(".calendar-months").html(html);
+//            jQuery("#nombre_dia").html('<h3>'+meses[parseInt(h)]+'</h3>');
+      }
+}
+
+function vista_anual2(ano){
+      var rano = ano;
+      jQuery(".calendar-months").html('');
+      var meses = new Array ("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+      var anio = data[ano];
+      if(anio){
+        var html = ""; 
+        for(h in anio){
+          contEventos = 0;
+          for(i in anio[h]){
+            contEventos += anio[h][i].length;
+          }
+          html += '<div class="calendar_items calendar_items-months">';
+          html += '<a href="#weeks" name="Enero" onClick="vista_mes(\''+ano+'\',\''+h+'\')"><div class="medium-text-center">';
+          html += '<big>'+meses[parseInt(h)]+' '+contEventos+' eventos'+'</big>';
+          html += '<p class="weight-thin">En todas nuestras bibliotecas</p></div></a></div>'; 
+
+          jQuery(".calendar-months").html(html);
+          jQuery("#text-anio").html('<h3>'+ano+'</h3>');
+        }
+      }else{
+        html = '<h2>No hay eventos en este año.</h2>';
+        jQuery(".calendar-months").html(html);
+        jQuery("#text-anio").html('<h3>'+ano+'</h3>');
+      }
+      jQuery("#vista_anos_button").attr("ir-hacia", 'vista_anual(\''+rano+'\')');
+}
+function vista_mes(ano,h){
+      var rano = ano; 
+      var rh = h;
+      jQuery(".calendar-mes").html('');
+        var meses = new Array ("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        var anio = data[ano];
+        if(anio){var aniomes = anio[h];}
+        if(aniomes){
+          var html = ""; 
+          contEventos = 0;
+          for(i in anio[h]){
+            contEventos = anio[h][i].length;
+            html += '<div class="calendar_items calendar_items-months">';
+            html += '<a href="#days" name="Enero" onClick="vista_dia(\''+ano+'\',\''+h+'\',\''+i+'\')"><div class="medium-text-center">';
+            html += '<big> '+parseInt(i)+' '+meses[parseInt(h)]+' '+contEventos+' eventos'+'</big>';
+            html += '<p class="weight-thin">En todas nuestras bibliotecas</p></div></a></div>'; 
+
+            jQuery(".calendar-mes").html(html);
+            jQuery("#nombre_mes").html('<h3>'+meses[parseInt(h)]+' del '+ano+'</h3>');
+          }
+        }else{
+          html = '<h2>No hay eventos en este mes.</h2>';
+          jQuery(".calendar-mes").html(html);
+           jQuery("#nombre_mes").html('<h3>'+meses[parseInt(h)]+' del '+ano+'</h3>');
+        }
+        if(h == '01'){
+          ano = parseInt(ano) -1;
+          jQuery('#ant-mes').attr("ir-ano", String(ano));
+          jQuery('#ant-mes').attr("ir-mes", "12");
+
+          jQuery('#sig-mes').attr("ir-ano", String(ano+1));
+          jQuery('#sig-mes').attr("ir-mes", "02");
+
+        }else if(h == '12'){
+          ano = parseInt(ano);
+          jQuery('#ant-mes').attr("ir-ano", String(ano));
+          jQuery('#ant-mes').attr("ir-mes", "11");
+
+          jQuery('#sig-mes').attr("ir-ano", String(ano+1));
+          jQuery('#sig-mes').attr("ir-mes", "01");
+
+        }else{
+          ano = parseInt(ano);
+          jQuery('#ant-mes').attr("ir-ano", String(ano));
+          mes = parseInt(h);
+          mes = mes-1;
+          if (mes < 10) { mes = String("0"+mes)}else{  mes = String(mes) };
+          jQuery('#ant-mes').attr("ir-mes", mes);
+
+          jQuery('#sig-mes').attr("ir-ano", String(ano));
+          mes = parseInt(h);
+          mes = mes+1;
+          if (mes < 10) { mes = String("0"+mes)}else{  mes = String(mes) };
+          jQuery('#sig-mes').attr("ir-mes", mes);
+        }
+        jQuery("#vista_meses_button").attr("ir-hacia", 'vista_mes(\''+rano+'\',\''+rh+'\')');
+}
+function vista_dia(ano,h,i){
+      var rano = ano;
+      var rh = h;
+      var ri = i; 
+      jQuery(".calendar-dia").html('');
+        var meses = new Array ("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+        var dias = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+        var anio = data[ano];
+        if(anio){var aniomes = anio[h];}
+        if(aniomes){var aniomesdia = aniomes[i];}
+        if(aniomesdia){
+          var html = ""; 
+          contEventos = 0;
+          html += '<div class="calendar_content_title">';
+          var d = new Date(parseInt(ano),parseInt(h)-1, parseInt(i));
+          var dia = dias[d.getDay()];
+          html += '<h3>'+dia+' '+i+' de '+meses[parseInt(h)]+' del '+ano+' </h3>';
+          html += '</div>';
+          for( j in aniomes[i] ){
+            html += '<div class="calendar_items calendar_items-days">';
+            html += '<div class="medium-text-left">';
+            var html2 = '';
+            var campo = false;
+            var campos = [];
+            for ( k in aniomes[i][j] ) {
+              if( aniomes[i][j][k]['id_campo'] == 8 && !campo){
+                html += '<big>'+ aniomes[i][j][k]['contenido']+'</big>';
+                campo = true;
+              }else{
+                if(campos.indexOf(aniomes[i][j][k]['campo_nombre']) == -1){
+                  html2 += '<li>';
+                  html2 += '<span><strong>'+ aniomes[i][j][k]['campo_nombre']+':</strong> '+aniomes[i][j][k]['contenido']+'</span>';
+                  html2 += '</li>';
+                  campos.push(aniomes[i][j][k]['campo_nombre']);
+                }
+              }
+            }
+            html += '<ul class="no-bullet">';
+            html += '<li><p></p></li>';
+            html += html2;
+            html += '</ul></div></div>'; 
+          }
+          jQuery(".calendar-dia").html(html);
+          jQuery("#nombre_dia").html('<h3>'+meses[parseInt(h)]+'</h3>');
+        }else{
+          var d = new Date(parseInt(ano),parseInt(h)-1, parseInt(i));
+          var dia = dias[d.getDay()];
+          html = '<h2>No hay eventos en este día.</h2>';
+          html += '<h3>'+dia+' '+i+' de '+meses[parseInt(h)]+' del '+ano+' </h3>';
+          jQuery(".calendar-dia").html(html);
+           jQuery("#nombre_dia").html('<h3>'+meses[parseInt(h)]+'</h3>');
+        }
+        ano = parseInt(ano);
+        if(i == 01){
+            
+          if(h == '01'){
+            ano = parseInt(ano) -1;
+            var ultimoDiaAnt = new Date(parseInt(ano), 12, 0).getDate();
+            if (ultimoDiaAnt < 10) { ultimoDiaAnt = String("0"+ultimoDiaAnt)}else{  ultimoDiaAnt = String(ultimoDiaAnt) };
+            jQuery('#ant-dia').attr("ir-ano", String(ano));
+            jQuery('#ant-dia').attr("ir-mes", "12");
+            jQuery('#ant-dia').attr("ir-dia", ultimoDiaAnt);
+
+            jQuery('#sig-dia').attr("ir-ano", String(ano+1));
+            jQuery('#sig-dia').attr("ir-mes", "01");
+            jQuery('#sig-dia').attr("ir-dia", "02");
+
+          }else{
+            ano = parseInt(ano);
+            var ultimoDia = new Date(parseInt(ano), parseInt(h-1), 0).getDate();
+            if (ultimoDia < 10) { ultimoDia = String("0"+ultimoDia)}else{  ultimoDia = String(ultimoDia) };
+            jQuery('#ant-dia').attr("ir-ano", String(ano));
+            mes = parseInt(h);
+            mes = mes-1;
+            if (mes < 10) { mes = String("0"+mes)}else{  mes = String(mes) };
+            jQuery('#ant-dia').attr("ir-mes", mes);
+            jQuery('#ant-dia').attr("ir-dia", ultimoDia);
+
+
+            jQuery('#sig-dia').attr("ir-ano", String(ano));
+            jQuery('#sig-dia').attr("ir-mes", h);
+            dia = parseInt(i);
+            dia = dia+1;
+            if (dia < 10) { dia = String("0"+dia)}else{  dia = String(dia) };
+            jQuery('#sig-dia').attr("ir-dia", "02");
+          }
+        }else{
+          var ultimoDia = new Date(parseInt(ano), parseInt(h), 0).getDate();
+          if (ultimoDia < 10) { ultimoDia = String("0"+ultimoDia)}else{  ultimoDia = String(ultimoDia) };
+          if (i == ultimoDia) {
+            if(h == '12'){
+              jQuery('#ant-dia').attr("ir-ano", String(ano));
+              jQuery('#ant-dia').attr("ir-mes", "12");
+              jQuery('#ant-dia').attr("ir-dia", '30');
+
+              
+              jQuery('#sig-dia').attr("ir-ano", String(ano+1));
+              jQuery('#sig-dia').attr("ir-mes", "01");
+              jQuery('#sig-dia').attr("ir-dia", "01");
+
+            }else{
+              jQuery('#ant-dia').attr("ir-ano", String(ano));
+              jQuery('#ant-dia').attr("ir-mes", h);
+              dia = parseInt(i);
+              dia = dia-1;
+              if (dia < 10) { dia = String("0"+dia)}else{  dia = String(dia) };
+              jQuery('#ant-dia').attr("ir-dia", dia);
+              
+
+              jQuery('#sig-dia').attr("ir-ano", String(ano));
+              mes = parseInt(h);
+              mes = mes+1;
+              if (mes < 10) { mes = String("0"+mes)}else{  mes = String(mes) };
+              jQuery('#sig-dia').attr("ir-mes", mes);
+              jQuery('#sig-dia').attr("ir-dia", "01");
+            }
+          }else{
+              jQuery('#ant-dia').attr("ir-ano", String(ano));
+              jQuery('#ant-dia').attr("ir-mes", h);
+              dia = parseInt(i);
+              dia = dia-1;
+              if (dia < 10) { dia = String("0"+dia)}else{  dia = String(dia) };
+              jQuery('#ant-dia').attr("ir-dia", dia);
+
+              jQuery('#sig-dia').attr("ir-ano", String(ano));
+              jQuery('#sig-dia').attr("ir-mes", h);
+              dia = parseInt(i);
+              dia = dia+1;
+              if (dia < 10) { dia = String("0"+dia)}else{  dia = String(dia) };
+              jQuery('#sig-dia').attr("ir-dia", dia);
+          }
+        }
+        jQuery("#vista_dias_button").attr("ir-hacia", 'vista_dia(\''+rano+'\',\''+rh+'\',\''+ri+'\')');
+}
+function buscar(){
+  var palabraBuscar = jQuery("#buscar").val();
+  var pb1 = omitirAcentos(palabraBuscar);
+  var pb2 = palabraBuscar.toLowerCase();
+  jQuery(".calendar-search").html('');
+  var meses = new Array ("","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+  var dias = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+  for (ano in data){
+    anio = data[ano];
+    for (h in anio){
+      var aniomes = anio[h];
+      for (i in aniomes){
+            var aniomesdia = aniomes[i];
+            for( j in aniomes[i] ){
+              var html2 = '';
+              var campo = false;
+              var filtrados = [];
+              for ( l in aniomes[i][j] ) { 
+                var p1 = omitirAcentos(aniomes[i]

@@ -1,0 +1,14 @@
+/*
+	Theme Name: SBPM
+	Theme URI: http://www.sbpm.com
+	Description: SBPM WordPress Theme
+	Author: Rafael Vega <rvega@elsoftwarehamuerto.org>
+	Version: 0.1
+*/
+
+@import "css/global.css";
+@media screen and (max-width: 768px) {
+	[class*="column"]+[class*="column"]:last-child {
+	  float: left;
+	}
+}

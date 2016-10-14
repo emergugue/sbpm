@@ -1,0 +1,49 @@
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 8
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 8
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 9
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 32
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 32
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 33
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 38
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 38
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 39
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 43
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 43
+[02-Jul-2014 19:33:27 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 44
+[02-Jul-2014 19:33:27 UTC] PHP Notice:  Undefined variable: mail in /home/creazionad/public_html/spagenda/mail/contacto.php on line 96
+[02-Jul-2014 19:33:27 UTC] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /home/creazionad/public_html/spagenda/mail/contacto.php on line 122
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 8
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 8
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 9
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 32
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 32
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 33
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 38
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 38
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 39
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 43
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 43
+[02-Jul-2014 19:33:31 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 44
+[02-Jul-2014 19:33:31 UTC] PHP Notice:  Undefined variable: mail in /home/creazionad/public_html/spagenda/mail/contacto.php on line 96
+[02-Jul-2014 19:33:31 UTC] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /home/creazionad/public_html/spagenda/mail/contacto.php on line 122
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 8
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 8
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 9
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 32
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 32
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 33
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 38
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 38
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 39
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_query(): Access denied for user 'creazionad'@'localhost' (using password: NO) in /home/creazionad/public_html/spagenda/mail/contacto.php on line 43
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/creazionad/public_html/spagenda/mail/contacto.php on line 43
+[02-Jul-2014 19:33:36 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/contacto.php on line 44
+[02-Jul-2014 19:33:36 UTC] PHP Notice:  Undefined variable: mail in /home/creazionad/public_html/spagenda/mail/contacto.php on line 96
+[02-Jul-2014 19:33:36 UTC] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /home/creazionad/public_html/spagenda/mail/contacto.php on line 122
+[02-Jul-2014 14:34:15 America/Bogota] PHP Notice:  Undefined variable: mail in /home/creazionad/public_html/spagenda/mail/contacto.php on line 96
+[02-Jul-2014 19:03:24 America/Bogota] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/creazionad/public_html/spagenda/mail/mail.php on line 33
+[02-Jul-2014 19:03:25 America/Bogota] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /home/creazionad/public_html/spagenda/mail/mail.php on line 126
+[03-Jul-2014 10:59:04 America/Bogota] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /home/creazionad/public_html/spagenda/mail/mail.php on line 127
+[03-Jul-2014 11:10:39 America/Bogota] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /home/creazionad/public_html/spagenda/mail/mail.php on line 127
+[07-Jul-2014 18:26:28 America/Bogota] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /home/creazionad/public_html/spagenda/mail/mail.php on line 128
+[21-Jul-2014 11:42:55 America/Bogota] PHP Notice:  Undefined index: HTTP_X_FORWARDED_FOR in /home/creazionad/public_html/spagenda/mail/mail.php on line 128

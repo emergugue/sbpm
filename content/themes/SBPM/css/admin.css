@@ -1,0 +1,38 @@
+.redux-container-slides .redux-slides-add {
+	margin-right: 0 !important;
+}
+
+.display-none,
+.wpb_custom_post_css,
+.wpb_edit_inline,
+.display-none,
+#wpb-edit-inline,
+#redux-header {
+	display: none !important;
+}
+
+.composer-switch a.wpb_switch-to-front-composer,
+.composer-switch a:visited.wpb_switch-to-front-composer,
+.composer-switch .logo-icon,
+.composer-switch .vc-spacer,
+.evo_shortcode_btn,
+.eventon_popup_trig,
+.vc_navbar .vc_logo,
+.row-actions .edit_vc {
+	display: none !important;
+}
+
+.blocks_list_title,
+.orbit_list_title {
+	padding-top: 5px;
+	padding-left: 62px;
+}
+
+.vc_element-icon.icon-wpb-layout_blocks {
+	background-image: none;
+}
+
+.icon-wpb-layout_blocks {
+	background-image: url("../includes/composer/descripcion.png") !important;
+	background-position: 0 0 !important;
+}
