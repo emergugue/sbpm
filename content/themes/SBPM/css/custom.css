@@ -1,0 +1,32 @@
+/*** 
+*
+* Styles add for Emerson Gutiérrez
+* Octuber/November/December - 2016
+*
+****/ 
+
+
+/* --------------------------------------------------------------
+## - Styles for custom Advanced Carousel (Ultimate Addos for VC)
+-------------------------------------------------------------- */
+
+.SliderCaption{
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(74,94,175,0.9);
+    padding: 10px;
+}
+.SliderCaption h2,
+.SliderCaption h2 a,
+.SliderCaption a h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.SliderCaption p,
+.SliderCaption p a,
+.SliderCaption a p{
+    font-size: 13px;
+    color: #fff;
+}

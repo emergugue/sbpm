@@ -9,6 +9,7 @@ cms/wp-content/upgrade/
 cms/wp-content/uploads/
 cms/wp-content/wp-cache-config.php
 cms/wp-content/plugins/hello.php
+cms/.htaccess
 content/uploads
 
 /.htaccess
