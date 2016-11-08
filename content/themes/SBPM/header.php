@@ -70,7 +70,7 @@
                   <?php if($innovati['tipo_micrositio']=='plan_municipal'){ ?>
                      <a href="/plan-municipal-de-lectura"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo_plan.png" alt="Logo" /></a>
                   <?php } else { ?>
-                     <a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Logo" /></a>
+                     <a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt="Logo" class="main-logo"></a>
                   <?php } ?>
                </div>
             </div>

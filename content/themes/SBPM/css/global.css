@@ -2423,7 +2423,14 @@ top:0.125rem}.microsites .headline{background-color:rgba(63,89,164,0.6)}.microsi
 position:relative}.microsites .navbar .top-bar{background:transparent}.microsites .navbar .top-bar ul li{background:transparent}.microsites .navbar .top-bar ul li a{background:transparent}.microsites .navbar .top-bar ul li a:hover{background-color:rgba(43,49,88,0.8)}.microsites .navbar .top-bar ul>.divider{border-right:solid 1px rgba(43,49,88,0.8)}.microsites .slider{margin-top:-8.9375rem;
 padding-top:12.5rem}.header{background-color:#5069b0;
 background-image:url("../images/header_pattern.png");
-background-repeat:repeat-x}.header .logo{margin-bottom:0.9375rem}@media only screen and (min-width: 40.063em){.header .logo{margin-bottom:1.5625rem}}.header .toBack{margin-top:1.25rem}.header .toBack a{font-size:0.875rem;
+background-repeat:repeat-x}.header .logo{margin-bottom:0.9375rem}
+@media only screen and (min-width: 40.063em){
+    .header .logo{
+        margin-bottom:0
+    }
+    .header .logo 
+}
+.header .toBack{margin-top:1.25rem}.header .toBack a{font-size:0.875rem;
 color:white;
 background-image:url("../images/icons/home.png");
 background-position:center top;
@@ -2437,7 +2444,7 @@ background-size:47px 44px}}
 .social{overflow:hidden}.social-header{display:none;
 margin:0.625rem 0 0.5rem}@media only screen and (min-width: 40.063em){.social-header{display:block}}.social-header ul li{padding-bottom:0}.social-header p{font-size:1.125rem;
 color:#fff;
-margin-top:0.625rem;
+margin-top:0;
 margin-bottom:0.625rem;
 margin-bottom:0}.byLine h2{font-weight:700;
 color:#fff;
@@ -2611,61 +2618,103 @@ background-image:url("../images/icons/facebook-color.png")}@media only screen an
 -webkit-background-size:47px 45px;
 -moz-background-size:47px 45px;
 -o-background-size:47px 45px;
-background-size:47px 45px}}.icon-facebook{width:47px;
-height:45px;
-background-image:url("../images/icons/facebook.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-facebook{background-image:url("../images/icons/facebook@2x.png");
--webkit-background-size:47px 45px;
--moz-background-size:47px 45px;
--o-background-size:47px 45px;
-background-size:47px 45px}}.icon-twitter-purple{width:47px;
-height:44px;
-background-image:url("../images/icons/twitter-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-twitter-purple{background-image:url("../images/icons/twitter-color@2x.png");
--webkit-background-size:47px 44px;
--moz-background-size:47px 44px;
--o-background-size:47px 44px;
-background-size:47px 44px}}.icon-twitter{width:47px;
-height:44px;
-background-image:url("../images/icons/twitter.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-twitter{background-image:url("../images/icons/twitter@2x.png");
--webkit-background-size:47px 44px;
--moz-background-size:47px 44px;
--o-background-size:47px 44px;
-background-size:47px 44px}}.icon-feed-purple{width:47px;
+background-size:47px 45px}}
+.icon-facebook{
+    width:32px;
+    height:30px;
+    background-image:url("../images/icons/facebook.png");
+    background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+    .icon-facebook{
+        background-image:url("../images/icons/facebook@2x.png");
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover
+    }
+}
+.icon-twitter-purple{
+    width:47px;
+    height:44px;
+    background-image:url("../images/icons/twitter-color.png")
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+    .icon-twitter-purple{
+        background-image:url("../images/icons/twitter-color@2x.png");
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover}
+    }
+    .icon-twitter{
+        width:32px;
+        height:30px;
+        background-image:url("../images/icons/twitter.png");
+        background-size: cover;
+    }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-twitter{background-image:url("../images/icons/twitter@2x.png");
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover}}.icon-feed-purple{width:47px;
 height:44px;
 background-image:url("../images/icons/rss-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-feed-purple{background-image:url("../images/icons/rss-color@2x.png");
--webkit-background-size:47px 44px;
--moz-background-size:47px 44px;
--o-background-size:47px 44px;
-background-size:47px 44px}}.icon-feed{width:47px;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover}}.icon-feed{width:47px;
 height:44px;
 background-image:url("../images/icons/rss.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-feed{background-image:url("../images/icons/rss@2x.png");
--webkit-background-size:47px 44px;
--moz-background-size:47px 44px;
--o-background-size:47px 44px;
-background-size:47px 44px}}.icon-youtube-purple{width:44px;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover}}.icon-youtube-purple{width:44px;
 height:44px;
 background-image:url("../images/icons/youtube-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-youtube-purple{background-image:url("../images/icons/youtube-color@2x.png");
 -webkit-background-size:44px 44px;
 -moz-background-size:44px 44px;
 -o-background-size:44px 44px;
-background-size:44px 44px}}.icon-youtube{width:44px;
-height:44px;
-background-image:url("../images/icons/youtube.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-youtube{background-image:url("../images/icons/youtube@2x.png");
--webkit-background-size:44px 44px;
--moz-background-size:44px 44px;
--o-background-size:44px 44px;
-background-size:44px 44px}}.icon-flickr-purple{width:46px;
+background-size:44px 44px}}
+.icon-youtube{
+    width:32px;
+    height:30px;
+    background-image:url("../images/icons/youtube.png");
+    background-size: cover;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+    .icon-youtube{
+        background-image:url("../images/icons/youtube@2x.png");
+        -webkit-background-size:32px 30px;
+        -moz-background-size:32px 30px;
+        -o-background-size:32px 30px;
+        background-size:32px 30px
+    }
+}
+.icon-flickr-purple{width:46px;
 height:44px;
 background-image:url("../images/icons/flickr-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-flickr-purple{background-image:url("../images/icons/flickr-color@2x.png");
--webkit-background-size:46px 44px;
--moz-background-size:46px 44px;
--o-background-size:46px 44px;
-background-size:46px 44px}}.icon-flickr{width:46px;
-height:44px;
-background-image:url("../images/icons/flickr.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-flickr{background-image:url("../images/icons/flickr@2x.png");
--webkit-background-size:46px 44px;
--moz-background-size:46px 44px;
--o-background-size:46px 44px;
-background-size:46px 44px}}.icon-no-purple{width:45px;
+-webkit-background-size:32px 30px;
+-moz-background-size:32px 30px;
+-o-background-size:32px 30px;
+background-size:32px 30px}}
+.icon-flickr{
+    width:32px;
+    height:30px;
+    background-image:url("../images/icons/flickr.png");
+    background-size: cover;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
+    .icon-flickr{
+        background-image:url("../images/icons/flickr@2x.png");
+        -webkit-background-size:32px 30px;
+        -moz-background-size:32px 30px;
+        -o-background-size:32px 30px;
+        background-size:32px 30px
+    }
+}
+.icon-no-purple{width:45px;
 height:46px;
 background-image:url("../images/icons/no-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-no-purple{background-image:url("../images/icons/no-color@2x.png");
 -webkit-background-size:45px 46px;
@@ -2735,7 +2784,7 @@ base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIge
 }
 
 .social-header .columns ul li{
-   width: 60px;
+   width: 45px;
 }
 
 .social-header #siguenos{
@@ -2749,7 +2798,7 @@ base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIge
 }
 
 #logo-alcaldia{
-   max-width:132px;
+   max-width:120px;
    width:132px;
    height:auto;
 }
@@ -2760,12 +2809,13 @@ base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIge
 
 .byLine h2 {
    margin: -10px 0 0 0;
-   font-size:2rem;
+   font-size:1.8rem;
 }
 
 .byLine h3 {
    margin:-8px 0 0 0;
    /* display:inline-block; */
+   font-size: 1.3rem;
 }
 
 .byLine h5{
@@ -2779,7 +2829,7 @@ base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIge
 /* Search in header */
 .social-header #search-frm {
    float:left;
-   margin: 13px 0 0 0;
+   margin: 8px 0 0 0;
 }
 .social-header #search-frm #glass{
    background-image:url('../images/glass.png');
@@ -3292,4 +3342,24 @@ footer .copyright{
 .SliderCaption a p{
     font-size: 13px;
     color: #fff;
+}
+
+
+
+
+
+/* --------------------------------------------------------------
+## - Custom fix
+-------------------------------------------------------------- */
+.main-logo{
+    max-height: 130px;
+}
+
+.wpb_gmaps_widget{
+    width: 90%;
+}
+@media (min-width: 768px){
+    .wpb_gmaps_widget{
+        width: 100%;
+    }
 }
