@@ -2612,13 +2612,13 @@ background-color:#5069b0;
 -moz-border-radius:5px;
 -webkit-border-radius:5px;
 border-radius:5px}.icon{display:block;
-margin:0 auto}.icon-facebook-purple{width:47px;
-height:45px;
+margin:0 auto}.icon-facebook-purple{width:32px;
+height:30px;
 background-image:url("../images/icons/facebook-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-facebook-purple{background-image:url("../images/icons/facebook-color@2x.png");
--webkit-background-size:47px 45px;
--moz-background-size:47px 45px;
--o-background-size:47px 45px;
-background-size:47px 45px}}
+-webkit-background-size:32px 30px;
+-moz-background-size:32px 30px;
+-o-background-size:32px 30px;
+background-size:32px 30px}}
 .icon-facebook{
     width:32px;
     height:30px;
@@ -2636,8 +2636,8 @@ background-size:47px 45px}}
     }
 }
 .icon-twitter-purple{
-    width:47px;
-    height:44px;
+    width:32px;
+    height:30px;
     background-image:url("../images/icons/twitter-color.png")
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
@@ -2658,25 +2658,25 @@ background-size:47px 45px}}
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
-background-size:cover}}.icon-feed-purple{width:47px;
-height:44px;
+background-size:cover}}.icon-feed-purple{width:32px;
+height:30px;
 background-image:url("../images/icons/rss-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-feed-purple{background-image:url("../images/icons/rss-color@2x.png");
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
-background-size:cover}}.icon-feed{width:47px;
-height:44px;
+background-size:cover}}.icon-feed{width:32px;
+height:30px;
 background-image:url("../images/icons/rss.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-feed{background-image:url("../images/icons/rss@2x.png");
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
-background-size:cover}}.icon-youtube-purple{width:44px;
-height:44px;
+background-size:cover}}.icon-youtube-purple{width:32px;
+height:30px;
 background-image:url("../images/icons/youtube-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-youtube-purple{background-image:url("../images/icons/youtube-color@2x.png");
--webkit-background-size:44px 44px;
--moz-background-size:44px 44px;
--o-background-size:44px 44px;
-background-size:44px 44px}}
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover}}
 .icon-youtube{
     width:32px;
     height:30px;
@@ -2686,19 +2686,19 @@ background-size:44px 44px}}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
     .icon-youtube{
         background-image:url("../images/icons/youtube@2x.png");
-        -webkit-background-size:32px 30px;
-        -moz-background-size:32px 30px;
-        -o-background-size:32px 30px;
-        background-size:32px 30px
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover
     }
 }
-.icon-flickr-purple{width:46px;
-height:44px;
+.icon-flickr-purple{width:32px;
+height:30px;
 background-image:url("../images/icons/flickr-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-flickr-purple{background-image:url("../images/icons/flickr-color@2x.png");
--webkit-background-size:32px 30px;
--moz-background-size:32px 30px;
--o-background-size:32px 30px;
-background-size:32px 30px}}
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover}}
 .icon-flickr{
     width:32px;
     height:30px;
@@ -2708,25 +2708,25 @@ background-size:32px 30px}}
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
     .icon-flickr{
         background-image:url("../images/icons/flickr@2x.png");
-        -webkit-background-size:32px 30px;
-        -moz-background-size:32px 30px;
-        -o-background-size:32px 30px;
-        background-size:32px 30px
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover
     }
 }
-.icon-no-purple{width:45px;
-height:46px;
+.icon-no-purple{width:32px;
+height:30px;
 background-image:url("../images/icons/no-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-no-purple{background-image:url("../images/icons/no-color@2x.png");
--webkit-background-size:45px 46px;
--moz-background-size:45px 46px;
--o-background-size:45px 46px;
-background-size:45px 46px}}.icon-no{width:45px;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover}}.icon-no{width:45px;
 height:46px;
 background-image:url("../images/icons/no.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-no{background-image:url("../images/icons/no@2x.png");
--webkit-background-size:45px 46px;
--moz-background-size:45px 46px;
--o-background-size:45px 46px;
-background-size:45px 46px}}
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover}}
 
 .chosen-container-multi .chosen-choices li.search-field input[type="text"]{
 	
