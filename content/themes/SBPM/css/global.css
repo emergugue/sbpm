@@ -2612,9 +2612,14 @@ background-color:#5069b0;
 -moz-border-radius:5px;
 -webkit-border-radius:5px;
 border-radius:5px}.icon{display:block;
-margin:0 auto}.icon-facebook-purple{width:32px;
-height:30px;
-background-image:url("../images/icons/facebook-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-facebook-purple{background-image:url("../images/icons/facebook-color@2x.png");
+margin:0 auto}
+.icon-facebook-purple{
+    width:32px;
+    height:30px;
+    background-image:url("../images/icons/facebook-color.png");
+    background-size: cover;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-facebook-purple{background-image:url("../images/icons/facebook-color@2x.png");
 -webkit-background-size:32px 30px;
 -moz-background-size:32px 30px;
 -o-background-size:32px 30px;
@@ -2638,7 +2643,8 @@ background-size:32px 30px}}
 .icon-twitter-purple{
     width:32px;
     height:30px;
-    background-image:url("../images/icons/twitter-color.png")
+    background-image:url("../images/icons/twitter-color.png");
+    background-size: cover;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){
     .icon-twitter-purple{
@@ -2670,9 +2676,14 @@ background-image:url("../images/icons/rss.png")}@media only screen and (-webkit-
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
-background-size:cover}}.icon-youtube-purple{width:32px;
-height:30px;
-background-image:url("../images/icons/youtube-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-youtube-purple{background-image:url("../images/icons/youtube-color@2x.png");
+background-size:cover}}
+.icon-youtube-purple{
+    width:32px;
+    height:30px;
+    background-image:url("../images/icons/youtube-color.png");
+    background-size: cover;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-youtube-purple{background-image:url("../images/icons/youtube-color@2x.png");
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
@@ -2692,9 +2703,13 @@ background-size:cover}}
         background-size:cover
     }
 }
-.icon-flickr-purple{width:32px;
-height:30px;
-background-image:url("../images/icons/flickr-color.png")}@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-flickr-purple{background-image:url("../images/icons/flickr-color@2x.png");
+.icon-flickr-purple {
+    width:32px;
+    height:30px;
+    background-image:url("../images/icons/flickr-color.png");
+    background-size: cover;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx){.icon-flickr-purple{background-image:url("../images/icons/flickr-color@2x.png");
 -webkit-background-size:cover;
 -moz-background-size:cover;
 -o-background-size:cover;
