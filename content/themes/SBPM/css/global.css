@@ -3392,6 +3392,6 @@ footer .copyright{
 }
 
 .vc_column_container {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
 }

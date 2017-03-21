@@ -8,6 +8,7 @@
       <meta charset="<?php bloginfo( 'charset' ) ?>">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta name="viewport" content="width=device-width">
+      <meta name="google-site-verification" content="MVCkKYLolMzsoA_dT9Z-y_SPNw1rMYntK5QQcghCT3c" />
       <title><?php bloginfo('name'); ?></title>
       <meta name="author" content="">
       <link rel="author" href="">
@@ -95,7 +96,13 @@
                            <?php endif; ?>
 
                        
-                          <a href="http://www.medellin.gov.co" target="_blank"><img id="logo-alcaldia" src="<?php bloginfo('stylesheet_directory'); ?>/images/logoAlcaldia.png" alt="Logo Alcaldía de Medellín"></a>
+                          <div class="logoContainer">
+                              <?php if ( is_active_sidebar( 'logos-header' ) ) { ?>
+                                    <?php dynamic_sidebar( 'logos-header' ); ?>
+                              <?php } else { ?>
+                                    <a href="http://www.medellin.gov.co" target="_blank"><img id="logo-alcaldia" src="<?php bloginfo('stylesheet_directory'); ?>/images/logoAlcaldia.png" alt="Logo Alcaldía de Medellín"></a>
+                               <?php } ?>
+                          </div>
                         </div>
 
                         <div class="columns">

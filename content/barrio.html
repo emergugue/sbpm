@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .BuscadorMiBarrio{
+        padding: 60px 10px 30px 10px;
+        background: url(buscador-barrio.jpg);
+        background-size: cover;
+        text-align: center;
+    }
+    .BuscadorMiBarrio h4{
+        text-align: center;
+        margin: 0;
+        color: #5661A3;
+    }
+    .BuscadorMiBarrio-titulo{
+        padding: 10px;
+        background: rgba(256, 256, 256, 0.8);
+        display: inline-block;
+    }
+    .BuscadorMiBarrio input[type="text"] {
+        background: #fff;
+    }
+</style>
+<body>
+    <div class="BuscadorMiBarrio">
+        <div class="BuscadorMiBarrio-titulo">
+            <h4>Somos tu punto de conexión con el territorio <br>
+                <strong>Busca información en nuestra Sala Mi Corregimiento</strong>
+            </h4>
+        </div>
+         <form action="http://rbmam.janium.net/janium-bin/janium_login_opac.pl" method="get" target="_blank">
+            <label for="terminos"></label>    
+            <input id="terminos" name="keyword" type="text" placeholder="Escribe aquí lo que quieres buscar">
+            <input name="scan" value="1" type="hidden">
+            <input name="biblioteca" value="20" type="hidden">
+            <input name="ubicacion" value="69" type="hidden">
+        </form>
+    </div>
+</body>
+</html>

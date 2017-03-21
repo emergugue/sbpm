@@ -16,11 +16,7 @@
 						</div>
 					<?php endif; ?>
 					<h2 class="article-title"><?php if(!is_singular()): ?><a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php endif; the_title() ?><?php if(!is_singular()): ?></a><?php endif; ?></h2>
-						<div class="article-info">
-							<span class="date"><?php the_date('m-d-Y') ?></span>
-							<span class="comments"><?php comments_popup_link(__('Leave a comment'), __('1 Comment'), __('% Comments')) ?></span>
-						</div>
-					</header>
+				</header>
 					<div class="article-content">
 						<?php (is_single()) ? the_content() : the_excerpt() ?>
 						<?php if( get_field("archivo") ){ ?>

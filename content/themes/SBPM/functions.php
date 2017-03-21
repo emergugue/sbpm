@@ -114,8 +114,17 @@ function register_widgets(){
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
-		) );
-	}//end register_widgets()
+	) );
+	register_sidebar( array(
+		'name' => __( 'Logos header' ),
+		'id' => 'logos-header',
+		'description'   => esc_html__( 'Agregue los logos al caebzote' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+}//end register_widgets()
 	add_action( 'widgets_init', 'register_widgets' );
 
 	/**
